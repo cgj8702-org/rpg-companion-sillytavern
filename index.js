@@ -1370,30 +1370,10 @@ jQuery(async () => {
             console.error('[RPG Companion] Chat data load failed, using defaults:', error);
         }
 
-        // Import the HTML cleaning regex if needed
-        try {
-            await ensureHtmlCleaningRegex(st_extension_settings, saveSettingsDebounced);
-        } catch (error) {
-            console.error('[RPG Companion] HTML regex import failed:', error);
-            // Non-critical - continue without it
-        }
-
-        // Import the tracker cleaning regex (removes old together mode JSON from prompts)
-        try {
-            await ensureTrackerCleaningRegex(st_extension_settings, saveSettingsDebounced);
-        } catch (error) {
-            console.error('[RPG Companion] Tracker cleaning regex import failed:', error);
-            // Non-critical - continue without it
-        }
-
-        // Import the JSON cleaning regex to clean up JSON in messages
-        // This cleans historical messages when displayed
-        try {
-            await ensureJsonCleaningRegex(st_extension_settings, saveSettingsDebounced);
-        } catch (error) {
-            console.error('[RPG Companion] JSON cleaning regex setup failed:', error);
-            // Non-critical - continue without it
-        }
+        // NOTE: Built-in regex auto-loading has been disabled.
+        // The 3 regex patterns (HTML cleaning, tracker cleaning, JSON cleaning)
+        // will NOT be automatically imported on startup.
+        // You can manually add them via SillyTavern's regex settings if desired.
 
         // Detect conflicting regex scripts from old manual formatters
         try {

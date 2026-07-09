@@ -670,11 +670,11 @@ export async function onGenerationStarted(type, data, dryRun) {
             // console.log('[RPG Companion] NOT injecting example. example:', !!example, 'lastAssistantDepth:', lastAssistantDepth);
         }
 
-        // Inject the instructions as a user message at depth 0 (right before generation)
+        // Inject the instructions as a system message at depth 0 (right before generation)
         // If this is a guided generation (user explicitly injected 'instruct'), skip adding
         // our tracker instructions to avoid clobbering the guided prompt.
         if (!shouldSuppress) {
-            setExtensionPrompt('rpg-companion-inject', instructions, extension_prompt_types.IN_CHAT, 0, false, extension_prompt_roles.USER);
+            setExtensionPrompt('rpg-companion-inject', instructions, extension_prompt_types.IN_CHAT, 0, false, extension_prompt_roles.SYSTEM);
         }
         // console.log('[RPG Companion] Injected RPG tracking instructions at depth 0 (right before generation)');
 
