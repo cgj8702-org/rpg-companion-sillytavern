@@ -1,29 +1,12 @@
-# RPG Companion Extension for SillyTavern
+# RPG Companion Extension for SillyTavern - cgj8702 fork 🤓☝🏻
 
 An immersive RPG extension for browsers that tracks character stats, scene information, and character thoughts in a beautiful, customizable UI panel. All automated! Works with any preset. Choose between Together or Separate generation modes for context and generation control.
-
-[![My Discord](https://img.shields.io/badge/Discord-Join%20Server-7289da)](https://discord.com/invite/KdAkTg94ME)
-[![Support Me](https://img.shields.io/badge/Ko--fi-Support%20Creator-ff5e5b)](https://ko-fi.com/marinara_spaghetti)
-
-## 🆕 What's New
 
 ### DEPRECATED
 
 Moving on to developing the Marinara Engine frontend, the extension will now be maintained by the community!
 
-<https://github.com/Pasta-Devs/Marinara-Engine>
-
-## 📥 Installation
-
-1. Open SillyTavern
-
-2. Go to the Extensions tab (cubes icon at the top)
-
-3. Go to Install extension
-
-4. Copy-paste this link: <https://github.com/SpicyMarinara/rpg-companion-sillytavern>
-
-5. Press Install for all users/Install just for me
+[https://github.com/Pasta-Devs/Marinara-Engine](https://github.com/Pasta-Devs/Marinara-Engine)
 
 ![png](https://i.imgur.com/DYuIMWt.png)
 
