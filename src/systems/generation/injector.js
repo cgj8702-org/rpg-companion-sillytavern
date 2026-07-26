@@ -684,7 +684,7 @@ export async function onGenerationStarted(type, data, dryRun) {
             const htmlPromptText = extensionSettings.customHtmlPrompt || DEFAULT_HTML_PROMPT;
             const htmlPrompt = `\n- ${htmlPromptText}\n`;
 
-            setExtensionPrompt('rpg-companion-html', htmlPrompt, extension_prompt_types.IN_CHAT, 0, false);
+            setExtensionPrompt('rpg-companion-html', htmlPrompt, extension_prompt_types.IN_CHAT, 0, false, extension_prompt_roles.SYSTEM);
             // console.log('[RPG Companion] Injected HTML prompt at depth 0 for together mode');
         } else {
             // Clear HTML prompt if disabled
@@ -697,7 +697,7 @@ export async function onGenerationStarted(type, data, dryRun) {
             const dialogueColoringPromptText = extensionSettings.customDialogueColoringPrompt || DEFAULT_DIALOGUE_COLORING_PROMPT;
             const dialogueColoringPrompt = `\n- ${dialogueColoringPromptText}\n`;
 
-            setExtensionPrompt('rpg-companion-dialogue-coloring', dialogueColoringPrompt, extension_prompt_types.IN_CHAT, 0, false);
+            setExtensionPrompt('rpg-companion-dialogue-coloring', dialogueColoringPrompt, extension_prompt_types.IN_CHAT, 0, false, extension_prompt_roles.SYSTEM);
             // console.log('[RPG Companion] Injected Dialogue Coloring prompt at depth 0 for together mode');
         } else {
             // Clear Dialogue Coloring prompt if disabled
@@ -710,7 +710,7 @@ export async function onGenerationStarted(type, data, dryRun) {
             const deceptionPromptText = extensionSettings.customDeceptionPrompt || DEFAULT_DECEPTION_PROMPT;
             const deceptionPrompt = `\n- ${deceptionPromptText}\n`;
 
-            setExtensionPrompt('rpg-companion-deception', deceptionPrompt, extension_prompt_types.IN_CHAT, 0, false);
+            setExtensionPrompt('rpg-companion-deception', deceptionPrompt, extension_prompt_types.IN_CHAT, 0, false, extension_prompt_roles.SYSTEM);
             // console.log('[RPG Companion] Injected Deception System prompt at depth 0 for together mode');
         } else {
             // Clear Deception System prompt if disabled
@@ -723,7 +723,7 @@ export async function onGenerationStarted(type, data, dryRun) {
             const omnisciencePromptText = extensionSettings.customOmnisciencePrompt || DEFAULT_OMNISCIENCE_FILTER_PROMPT;
             const omnisciencePrompt = `\n${omnisciencePromptText}\n`;
 
-            setExtensionPrompt('rpg-companion-omniscience', omnisciencePrompt, extension_prompt_types.IN_CHAT, 0, false);
+            setExtensionPrompt('rpg-companion-omniscience', omnisciencePrompt, extension_prompt_types.IN_CHAT, 0, false, extension_prompt_roles.SYSTEM);
             // console.log('[RPG Companion] Injected Omniscience Filter prompt at depth 0 for together mode');
         } else {
             // Clear Omniscience Filter prompt if disabled
@@ -736,7 +736,7 @@ export async function onGenerationStarted(type, data, dryRun) {
             const spotifyPromptText = extensionSettings.customSpotifyPrompt || DEFAULT_SPOTIFY_PROMPT;
             const spotifyPrompt = `\n- ${spotifyPromptText} ${SPOTIFY_FORMAT_INSTRUCTION}\n`;
 
-            setExtensionPrompt('rpg-companion-spotify', spotifyPrompt, extension_prompt_types.IN_CHAT, 0, false);
+            setExtensionPrompt('rpg-companion-spotify', spotifyPrompt, extension_prompt_types.IN_CHAT, 0, false, extension_prompt_roles.SYSTEM);
             // console.log('[RPG Companion] Injected Spotify prompt at depth 0 for together mode');
         } else {
             // Clear Spotify prompt if disabled
@@ -749,7 +749,7 @@ export async function onGenerationStarted(type, data, dryRun) {
             const cyoaPromptText = extensionSettings.customCYOAPrompt || DEFAULT_CYOA_PROMPT;
             const cyoaPrompt = `\n- ${cyoaPromptText}\n`;
 
-            setExtensionPrompt('rpg-companion-zzz-cyoa', cyoaPrompt, extension_prompt_types.IN_CHAT, 0, false);
+            setExtensionPrompt('rpg-companion-zzz-cyoa', cyoaPrompt, extension_prompt_types.IN_CHAT, 0, false, extension_prompt_roles.SYSTEM);
             // console.log('[RPG Companion] Injected CYOA prompt at depth 0 for together mode');
         } else {
             // Clear CYOA prompt if disabled
@@ -773,7 +773,7 @@ ${contextInstructionsText}
             // Inject context at depth 1 (before last user message) as SYSTEM
             // Skip when a guided generation injection is present to avoid conflicting instructions
             if (!shouldSuppress) {
-                setExtensionPrompt('rpg-companion-context', wrappedContext, extension_prompt_types.IN_CHAT, 1, false);
+                setExtensionPrompt('rpg-companion-context', wrappedContext, extension_prompt_types.IN_CHAT, 1, false, extension_prompt_roles.SYSTEM);
             }
             // console.log('[RPG Companion] Injected contextual summary for separate/external mode:', contextSummary);
         } else {
@@ -787,7 +787,7 @@ ${contextInstructionsText}
             const htmlPromptText = extensionSettings.customHtmlPrompt || DEFAULT_HTML_PROMPT;
             const htmlPrompt = `\n- ${htmlPromptText}\n`;
 
-            setExtensionPrompt('rpg-companion-html', htmlPrompt, extension_prompt_types.IN_CHAT, 0, false);
+            setExtensionPrompt('rpg-companion-html', htmlPrompt, extension_prompt_types.IN_CHAT, 0, false, extension_prompt_roles.SYSTEM);
             // console.log('[RPG Companion] Injected HTML prompt at depth 0 for separate/external mode');
         } else {
             // Clear HTML prompt if disabled
@@ -800,7 +800,7 @@ ${contextInstructionsText}
             const dialogueColoringPromptText = extensionSettings.customDialogueColoringPrompt || DEFAULT_DIALOGUE_COLORING_PROMPT;
             const dialogueColoringPrompt = `\n- ${dialogueColoringPromptText}\n`;
 
-            setExtensionPrompt('rpg-companion-dialogue-coloring', dialogueColoringPrompt, extension_prompt_types.IN_CHAT, 0, false);
+            setExtensionPrompt('rpg-companion-dialogue-coloring', dialogueColoringPrompt, extension_prompt_types.IN_CHAT, 0, false, extension_prompt_roles.SYSTEM);
             // console.log('[RPG Companion] Injected Dialogue Coloring prompt at depth 0 for separate/external mode');
         } else {
             // Clear Dialogue Coloring prompt if disabled
@@ -813,7 +813,7 @@ ${contextInstructionsText}
             const deceptionPromptText = extensionSettings.customDeceptionPrompt || DEFAULT_DECEPTION_PROMPT;
             const deceptionPrompt = `\n- ${deceptionPromptText}\n`;
 
-            setExtensionPrompt('rpg-companion-deception', deceptionPrompt, extension_prompt_types.IN_CHAT, 0, false);
+            setExtensionPrompt('rpg-companion-deception', deceptionPrompt, extension_prompt_types.IN_CHAT, 0, false, extension_prompt_roles.SYSTEM);
             // console.log('[RPG Companion] Injected Deception System prompt at depth 0 for separate/external mode');
         } else {
             // Clear Deception System prompt if disabled
@@ -826,7 +826,7 @@ ${contextInstructionsText}
             const omnisciencePromptText = extensionSettings.customOmnisciencePrompt || DEFAULT_OMNISCIENCE_FILTER_PROMPT;
             const omnisciencePrompt = `\n${omnisciencePromptText}\n`;
 
-            setExtensionPrompt('rpg-companion-omniscience', omnisciencePrompt, extension_prompt_types.IN_CHAT, 0, false);
+            setExtensionPrompt('rpg-companion-omniscience', omnisciencePrompt, extension_prompt_types.IN_CHAT, 0, false, extension_prompt_roles.SYSTEM);
             // console.log('[RPG Companion] Injected Omniscience Filter prompt at depth 0 for separate/external mode');
         } else {
             // Clear Omniscience Filter prompt if disabled
@@ -839,7 +839,7 @@ ${contextInstructionsText}
             const spotifyPromptText = extensionSettings.customSpotifyPrompt || DEFAULT_SPOTIFY_PROMPT;
             const spotifyPrompt = `\n- ${spotifyPromptText} ${SPOTIFY_FORMAT_INSTRUCTION}\n`;
 
-            setExtensionPrompt('rpg-companion-spotify', spotifyPrompt, extension_prompt_types.IN_CHAT, 0, false);
+            setExtensionPrompt('rpg-companion-spotify', spotifyPrompt, extension_prompt_types.IN_CHAT, 0, false, extension_prompt_roles.SYSTEM);
             // console.log('[RPG Companion] Injected Spotify prompt at depth 0 for separate/external mode');
         } else {
             // Clear Spotify prompt if disabled
@@ -852,7 +852,7 @@ ${contextInstructionsText}
             const cyoaPromptText = extensionSettings.customCYOAPrompt || DEFAULT_CYOA_PROMPT;
             const cyoaPrompt = `\n- ${cyoaPromptText}\n`;
 
-            setExtensionPrompt('rpg-companion-zzz-cyoa', cyoaPrompt, extension_prompt_types.IN_CHAT, 0, false);
+            setExtensionPrompt('rpg-companion-zzz-cyoa', cyoaPrompt, extension_prompt_types.IN_CHAT, 0, false, extension_prompt_roles.SYSTEM);
             // console.log('[RPG Companion] Injected CYOA prompt at depth 0 for separate/external mode');
         } else {
             // Clear CYOA prompt if disabled

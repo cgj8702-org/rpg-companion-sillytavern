@@ -317,7 +317,7 @@ export async function buildEncounterInitPrompt() {
     // Only add the instruction if it has meaningful content
     if (initInstruction.trim()) {
         messages.push({
-            role: 'user',
+            role: 'system',
             content: initInstruction.trim()
         });
     }
@@ -476,7 +476,7 @@ export async function buildCombatActionPrompt(action, combatStats) {
         });
 
         messages.push({
-            role: 'user',
+            role: 'system',
             content: combatHistory
         });
     }
@@ -588,7 +588,7 @@ export async function buildCombatActionPrompt(action, combatStats) {
     }
 
     messages.push({
-        role: 'user',
+        role: 'system',
         content: stateMessage
     });
 
@@ -755,7 +755,7 @@ export async function buildCombatSummaryPrompt(combatLog, result) {
     }
 
     messages.push({
-        role: 'user',
+        role: 'system',
         content: summaryMessage
     });
 

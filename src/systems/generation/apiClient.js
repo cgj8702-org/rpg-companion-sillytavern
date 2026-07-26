@@ -141,7 +141,7 @@ export async function testExternalAPIConnection() {
 
     try {
         const testMessages = [
-            { role: 'user', content: 'Respond with exactly: "Connection successful"' }
+            { role: 'system', content: 'Respond with exactly: "Connection successful"' }
         ];
 
         const response = await generateWithExternalAPI(testMessages);

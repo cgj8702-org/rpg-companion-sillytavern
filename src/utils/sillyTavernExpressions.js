@@ -579,7 +579,7 @@ export async function classifyExpressionText(text, { characterName = '' } = {}) 
                 const prompt = substituteParamsExtended(settings.llmPrompt, { labels: labelsString });
                 const responseText = await generateWebLlmChatPrompt([
                     {
-                        role: 'user',
+                        role: 'system',
                         content: `${processedText}\n\n${prompt}`
                     }
                 ]);

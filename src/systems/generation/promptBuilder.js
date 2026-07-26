@@ -1345,7 +1345,7 @@ export async function generateSeparateUpdatePrompt() {
     instructionMessage += `\nProvide ONLY the requested data in the exact JSON format specified above. Do not include any roleplay response, other text, or commentary. Remember, all placeholders MUST be replaced with actual content. Do NOT wrap the JSON in code fences (\`\`\`json). Output the JSON object directly.`;
 
     messages.push({
-        role: 'user',
+        role: 'system',
         content: instructionMessage
     });
 
@@ -1451,7 +1451,7 @@ export async function generateAvatarPromptGenerationPrompt(characterName) {
     instructionMessage += `Instructions: ${customInstruction}\n\n`;
     instructionMessage += `Provide ONLY the image prompt text. Do not include the character's name, prefixes like "Prompt:", or any other commentary.`;
 
-    messages.push({ role: 'user', content: instructionMessage });
+    messages.push({ role: 'system', content: instructionMessage });
     return messages;
 }
 
