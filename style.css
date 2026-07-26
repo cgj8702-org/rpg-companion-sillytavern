@@ -30,8 +30,8 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
     position: fixed;
     top: var(--topBarBlockSize);
     bottom: 0;
-    background: var(--rpg-bg);
-    box-shadow: 0 0 20px var(--rpg-shadow);
+    background: transparent;
+    box-shadow: none;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     box-sizing: border-box;
     z-index: 1000;
@@ -538,8 +538,8 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
 
 /* Unified Content Box - Contains all sections, scales to fit viewport */
 .rpg-content-box {
-    background: linear-gradient(135deg, var(--rpg-accent) 0%, var(--rpg-bg) 100%);
-    border: 1px solid var(--rpg-border);
+    background: transparent;
+    border: none;
     border-radius: 0.625em;
     padding: 0.5em;
     box-shadow: none;
