@@ -637,7 +637,8 @@ export function setupMobileTabs() {
         tabs.push('<button class="rpg-mobile-tab ' + (tabs.length === 0 ? 'active' : '') + '" data-tab="quests"><i class="fa-solid fa-scroll"></i><span>' + (i18n.getTranslation('global.quests') || 'Quests') + '</span></button>');
     }
 
-    const $tabNav = $('<div class="rpg-mobile-tabs">' + tabs.join('') + '</div>');
+    const showTabNav = tabs.length > 1;
+    const $tabNav = showTabNav ? $('<div class="rpg-mobile-tabs">' + tabs.join('') + '</div>') : null;
 
     // Determine which tab should be active
     let firstTab = '';
@@ -688,7 +689,9 @@ export function setupMobileTabs() {
 
     // Build mobile tab structure
     const $mobileContainer = $('<div class="rpg-mobile-container"></div>');
-    $mobileContainer.append($tabNav);
+    if ($tabNav) {
+        $mobileContainer.append($tabNav);
+    }
 
     // Always append all tab content wrappers to preserve elements
     // Tab buttons control visibility
@@ -700,18 +703,20 @@ export function setupMobileTabs() {
     // Insert mobile tab structure at the beginning of content box
     $contentBox.prepend($mobileContainer);
 
-    // Handle tab switching
-    $tabNav.find('.rpg-mobile-tab').on('click', function() {
-        const tabName = $(this).data('tab');
+    if ($tabNav) {
+        // Handle tab switching
+        $tabNav.find('.rpg-mobile-tab').on('click', function() {
+            const tabName = $(this).data('tab');
 
-        // Update active tab button
-        $tabNav.find('.rpg-mobile-tab').removeClass('active');
-        $(this).addClass('active');
+            // Update active tab button
+            $tabNav.find('.rpg-mobile-tab').removeClass('active');
+            $(this).addClass('active');
 
-        // Update active tab content
-        $mobileContainer.find('.rpg-mobile-tab-content').removeClass('active');
-        $mobileContainer.find('[data-tab-content="' + tabName + '"]').addClass('active');
-    });
+            // Update active tab content
+            $mobileContainer.find('.rpg-mobile-tab-content').removeClass('active');
+            $mobileContainer.find('[data-tab-content="' + tabName + '"]').addClass('active');
+        });
+    }
 }
 
 /**

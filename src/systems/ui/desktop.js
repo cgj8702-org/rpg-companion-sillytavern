@@ -332,7 +332,8 @@ export function setupDesktopTabs() {
         `);
     }
 
-    const $tabNav = $(`<div class="rpg-tabs-nav">${tabButtons.join('')}</div>`);
+    const showTabNav = tabButtons.length > 1;
+    const $tabNav = showTabNav ? $(`<div class="rpg-tabs-nav">${tabButtons.join('')}</div>`) : null;
 
     // Create tab content containers
     const $statusTab = $('<div class="rpg-tab-content active" data-tab-content="status"></div>');
@@ -372,7 +373,9 @@ export function setupDesktopTabs() {
 
     // Build desktop tab structure
     const $tabsContainer = $('<div class="rpg-tabs-container"></div>');
-    $tabsContainer.append($tabNav);
+    if ($tabNav) {
+        $tabsContainer.append($tabNav);
+    }
     $tabsContainer.append($statusTab);
 
     // Always append inventory and quests tabs to preserve the elements
@@ -384,18 +387,20 @@ export function setupDesktopTabs() {
     $contentBox.html('').append($tabsContainer);
     i18n.applyTranslations($tabsContainer[0]);
 
-    // Handle tab switching
-    $tabNav.find('.rpg-tab-btn').on('click', function() {
-        const tabName = $(this).data('tab');
+    if ($tabNav) {
+        // Handle tab switching
+        $tabNav.find('.rpg-tab-btn').on('click', function() {
+            const tabName = $(this).data('tab');
 
-        // Update active tab button
-        $tabNav.find('.rpg-tab-btn').removeClass('active');
-        $(this).addClass('active');
+            // Update active tab button
+            $tabNav.find('.rpg-tab-btn').removeClass('active');
+            $(this).addClass('active');
 
-        // Update active tab content
-        $('.rpg-tab-content').removeClass('active');
-        $(`.rpg-tab-content[data-tab-content="${tabName}"]`).addClass('active');
-    });
+            // Update active tab content
+            $('.rpg-tab-content').removeClass('active');
+            $(`.rpg-tab-content[data-tab-content="${tabName}"]`).addClass('active');
+        });
+    }
 
 
 }
