@@ -407,14 +407,7 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
 
 /* Header - Fixed size, doesn't grow */
 .rpg-panel-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0;
-    margin-bottom: 0.5em;
-    padding: 0;
-    border-bottom: 2px solid var(--rpg-border);
-    flex-shrink: 0;
+    display: none !important;
 }
 
 .rpg-panel-header h3 {
