@@ -424,8 +424,8 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
     display: flex;
     align-items: center;
     gap: 0.5em;
-    color: var(--rpg-highlight);
-    text-shadow: 0 0 8px var(--rpg-highlight);
+    color: var(--rpg-text);
+    text-shadow: none;
     letter-spacing: 0.031em;
     border-left: none !important;
     padding-left: 0 !important;
@@ -434,7 +434,7 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
 .rpg-panel-header h3 i {
     border-left: none !important;
     padding-left: 0 !important;
-    color: var(--rpg-highlight);
+    color: var(--rpg-text);
 }
 
 .rpg-btn-icon {
@@ -539,10 +539,10 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
 /* Unified Content Box - Contains all sections, scales to fit viewport */
 .rpg-content-box {
     background: linear-gradient(135deg, var(--rpg-accent) 0%, var(--rpg-bg) 100%);
-    border: 2px solid var(--rpg-border);
+    border: 1px solid var(--rpg-border);
     border-radius: 0.625em;
     padding: 0.5em;
-    box-shadow: 0 4px 18px var(--rpg-shadow), inset 0 0 12px rgba(0, 0, 0, 0.3);
+    box-shadow: none;
     display: flex;
     flex-direction: column;
     gap: 0.375em;
@@ -1224,8 +1224,8 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
     font-size: clamp(1rem, 1.3vw, 1.3rem);
     font-weight: bold;
     margin-bottom: 0.625em;
-    color: var(--rpg-highlight);
-    text-shadow: 0 0 8px var(--rpg-highlight);
+    color: var(--rpg-text);
+    text-shadow: none;
     flex-shrink: 0;
 }
 
@@ -1973,8 +1973,8 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
     font-size: clamp(1rem, 1.3vw, 1.3rem);
     font-weight: bold;
     margin-bottom: 0.625em;
-    color: var(--rpg-highlight);
-    text-shadow: 0 0 8px var(--rpg-highlight);
+    color: var(--rpg-text);
+    text-shadow: none;
     flex-shrink: 0;
 }
 
@@ -2296,7 +2296,8 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
 
 .rpg-character-name {
     font-weight: bold;
-    color: var(--rpg-highlight);
+    color: var(--rpg-text);
+    text-shadow: none;
     font-size: clamp(0.75rem, 0.75vw, 0.875rem);
     text-transform: uppercase;
     letter-spacing: 0.031em;
