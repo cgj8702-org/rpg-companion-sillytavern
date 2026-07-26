@@ -36,7 +36,7 @@ export function setupPlotButtons(handlePlotClick, handleEncounterClick) {
                 cursor: pointer;
                 margin: 0 2px;
             " tabindex="0" role="button" title="${i18n.getTranslation('plotProgression.tooltips.randomizedPlot') || 'Generate a random plot twist or event'}">
-                <i class="fa-solid fa-dice"></i>&nbsp;<span class="rpg-btn-text">${i18n.getTranslation('plotProgression.buttons.randomizedPlot') || 'Randomized Plot'}</span>
+                <i class="fa-solid fa-wand-magic-sparkles"></i>&nbsp;<span class="rpg-btn-text">${i18n.getTranslation('plotProgression.buttons.randomizedPlot') || 'Randomized Plot'}</span>
             </button>
             <button id="rpg-plot-natural" class="menu_button interactable" style="
                 background-color: #4a90e2;

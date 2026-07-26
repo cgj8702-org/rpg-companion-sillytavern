@@ -297,7 +297,7 @@ async function initUI() {
     const theme = extensionSettings.theme || 'default';
     const mobileToggleHtml = `
         <button id="rpg-mobile-toggle" class="rpg-mobile-toggle" data-theme="${theme}" title="Toggle RPG Panel">
-            <i class="fa-solid fa-dice-d20"></i>
+            <i class="fa-solid fa-id-card"></i>
         </button>
     `;
     $('body').append(mobileToggleHtml);

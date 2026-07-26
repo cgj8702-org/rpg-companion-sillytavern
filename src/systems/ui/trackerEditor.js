@@ -790,7 +790,7 @@ function renderUserStatsTab() {
     html += `<button class="rpg-btn-secondary" id="rpg-add-stat"><i class="fa-solid fa-plus"></i> ${i18n.getTranslation('template.trackerEditorModal.userStatsTab.addCustomStatButton')}</button>`;
 
     // RPG Attributes section
-    html += `<h4><i class="fa-solid fa-dice-d20"></i> ${i18n.getTranslation('template.trackerEditorModal.userStatsTab.rpgAttributesTitle')}</h4>`;
+    html += `<h4><i class="fa-solid fa-shield-halved"></i> ${i18n.getTranslation('template.trackerEditorModal.userStatsTab.rpgAttributesTitle')}</h4>`;
 
     // Enable/disable toggle for entire RPG Attributes section
     const showRPGAttributes = config.showRPGAttributes !== undefined ? config.showRPGAttributes : true;
