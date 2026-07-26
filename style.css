@@ -2127,35 +2127,19 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.2s ease;
     width: 100%; /* Ensure cards take full width */
-    max-height: clamp(200px, 18vh, 250px);
+    max-height: none;
     box-sizing: border-box; /* Include padding and border in width calculation */
     flex-shrink: 0; /* Prevent cards from shrinking */
-    overflow: auto;
-    scrollbar-width: thin;
-    scrollbar-color: var(--rpg-border) transparent;
+    overflow: visible;
 }
 
 .rpg-character-card::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
-}
-
-.rpg-character-card::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.rpg-character-card::-webkit-scrollbar-thumb {
-    background: var(--rpg-border);
-    border-radius: 2px;
-}
-
-.rpg-character-card::-webkit-scrollbar-thumb:hover {
-    background: var(--rpg-highlight);
+    display: none;
 }
 
 .rpg-character-card:hover {
-    background: rgba(0, 0, 0, 0.4);
-    border-color: var(--rpg-highlight);
+    background: rgba(0, 0, 0, 0.35);
+    border-color: rgba(255, 255, 255, 0.15);
 }
 
 /* Header row with avatar and name */
@@ -2254,25 +2238,9 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
     display: flex;
     flex-direction: column;
     gap: clamp(3px, 0.5vh, 5px);
-    overflow-y: auto;
-    overflow-x: hidden;
+    overflow: visible;
     flex: 1;
     min-height: 0;
-    scrollbar-width: thin;
-    scrollbar-color: var(--rpg-border) transparent;
-}
-
-.rpg-character-info::-webkit-scrollbar {
-    width: 4px;
-}
-
-.rpg-character-info::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.rpg-character-info::-webkit-scrollbar-thumb {
-    background: var(--rpg-border);
-    border-radius: 2px;
 }
 
 .rpg-character-info::-webkit-scrollbar-thumb:hover {
