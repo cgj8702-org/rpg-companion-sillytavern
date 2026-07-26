@@ -429,7 +429,7 @@ export function renderThoughts({ preserveScroll = false, useCommittedFallback = 
                 if (enabledCharStats.length > 0) {
                     const lockIconHtml = getLockIconHtml('characters', `${char.name}.stats`);
                     html += `<div class="rpg-character-stats" style="position: relative;">
-                        <span class="rpg-section-lock-icon" style="position: absolute; top: 4px; right: 4px; font-size: 1rem; z-index: 10; opacity: 0.7; pointer-events: auto;">${lockIconHtml}</span>
+                        ${lockIconHtml}
                         <div class="rpg-character-stats-inner">`;
                     for (const stat of enabledCharStats) {
                         const statValue = char[stat.name] || 0;
