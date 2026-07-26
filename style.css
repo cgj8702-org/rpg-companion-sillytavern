@@ -1,4 +1,3 @@
-
 /* Ensure chat stays centered when panel is visible */
 body:has(.rpg-panel.rpg-position-right) #sheld {
     margin: auto !important;
@@ -7,6 +6,7 @@ body:has(.rpg-panel.rpg-position-right) #sheld {
 body:has(.rpg-panel.rpg-position-left) #sheld {
     margin: auto !important;
 }
+
 /* ============================================
    RPG COMPANION - GAME-LIKE UI - RESPONSIVE
    ============================================ */
@@ -195,6 +195,7 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
 }
 
 @media (max-width: 768px) {
+
     /* Left position on mobile/tablet */
     body.rpg-panel-position-left #rpg-companion-panel.rpg-panel,
     #rpg-companion-panel.rpg-panel.rpg-position-left {
@@ -284,11 +285,25 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
     animation: slideInFromLeft 0.5s ease-out backwards;
 }
 
-.rpg-panel.rpg-animations-enabled .rpg-info-line:nth-child(1) { animation-delay: 0.1s; }
-.rpg-panel.rpg-animations-enabled .rpg-info-line:nth-child(2) { animation-delay: 0.2s; }
-.rpg-panel.rpg-animations-enabled .rpg-info-line:nth-child(3) { animation-delay: 0.3s; }
-.rpg-panel.rpg-animations-enabled .rpg-info-line:nth-child(4) { animation-delay: 0.4s; }
-.rpg-panel.rpg-animations-enabled .rpg-info-line:nth-child(5) { animation-delay: 0.5s; }
+.rpg-panel.rpg-animations-enabled .rpg-info-line:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.rpg-panel.rpg-animations-enabled .rpg-info-line:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.rpg-panel.rpg-animations-enabled .rpg-info-line:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.rpg-panel.rpg-animations-enabled .rpg-info-line:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.rpg-panel.rpg-animations-enabled .rpg-info-line:nth-child(5) {
+    animation-delay: 0.5s;
+}
 
 .rpg-panel.rpg-animations-enabled .rpg-thoughts-overlay {
     animation: fadeInScale 0.6s ease-out;
@@ -299,7 +314,8 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
 }
 
 .rpg-panel.rpg-animations-enabled .rpg-dice-animation {
-    animation: none; /* Control separately */
+    animation: none;
+    /* Control separately */
 }
 
 /* Disable dice animation when animations are off */
@@ -316,6 +332,7 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
         opacity: 0;
         transform: translateX(-1.25rem);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -327,6 +344,7 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
         opacity: 0;
         transform: scale(0.95);
     }
+
     to {
         opacity: 1;
         transform: scale(1);
@@ -339,9 +357,12 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
 }
 
 @keyframes contentPulse {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 1;
     }
+
     50% {
         opacity: 0.6;
     }
@@ -460,10 +481,13 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
 }
 
 @keyframes pulseGlow {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 1;
         box-shadow: 0 0 10px var(--rpg-highlight);
     }
+
     50% {
         opacity: 0.7;
         box-shadow: 0 0 20px var(--rpg-highlight);
@@ -571,7 +595,8 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
 }
 
 .rpg-divider::after {
-    display: none; /* Remove diamond decoration for more space */
+    display: none;
+    /* Remove diamond decoration for more space */
 }
 
 /* ============================================
@@ -593,7 +618,8 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
     flex: 1;
     overflow-y: auto;
     overflow-x: hidden;
-    position: relative; /* For absolute positioning of lock icon on mobile */
+    position: relative;
+    /* For absolute positioning of lock icon on mobile */
 }
 
 /* Hide the stats header - we'll integrate portrait/inventory into stats content */
@@ -703,7 +729,8 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
     flex: 1;
     min-height: 0;
     overflow: hidden;
-    position: relative; /* For absolute positioning of lock icon */
+    position: relative;
+    /* For absolute positioning of lock icon */
 }
 
 /* Stats Left - Portrait, Bars and mood */
@@ -797,16 +824,16 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
 }
 
 /* Portrait and Inventory row at top of stats-left */
-.rpg-stats-left > .rpg-user-portrait,
-.rpg-stats-left > .rpg-inventory-box {
+.rpg-stats-left>.rpg-user-portrait,
+.rpg-stats-left>.rpg-inventory-box {
     flex-shrink: 0;
 }
 
-.rpg-stats-left > .rpg-user-portrait {
+.rpg-stats-left>.rpg-user-portrait {
     align-self: flex-start;
 }
 
-.rpg-stats-left > .rpg-inventory-box {
+.rpg-stats-left>.rpg-inventory-box {
     width: 100%;
 }
 
@@ -823,7 +850,8 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
     flex-direction: column;
     gap: clamp(3px, 0.5vh, 6px);
     flex: 1 1 auto;
-    position: relative; /* For lock icon positioning */
+    position: relative;
+    /* For lock icon positioning */
     overflow: visible;
 }
 
@@ -990,7 +1018,8 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
 }
 
 /* Compact layout for high zoom / small viewports */
-@media (max-height: 750px), (max-width: 1500px) {
+@media (max-height: 750px),
+(max-width: 1500px) {
     .rpg-stat-row {
         position: relative;
         min-height: clamp(16px, 2.5vh, 20px);
@@ -1055,7 +1084,8 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
     border-radius: 0.25em;
     border: 1px solid var(--rpg-border);
     flex-shrink: 0;
-    position: relative; /* For lock icon positioning */
+    position: relative;
+    /* For lock icon positioning */
 }
 
 .rpg-mood-emoji {
@@ -1087,7 +1117,8 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
     border: 1px solid var(--rpg-border);
     flex-shrink: 0;
     margin-top: 0.375em;
-    position: relative; /* For lock icon positioning */
+    position: relative;
+    /* For lock icon positioning */
 }
 
 .rpg-skills-label {
@@ -1472,6 +1503,7 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 3;
+    line-clamp: 3;
     -webkit-box-orient: vertical;
     hyphens: auto;
 }
@@ -1646,10 +1678,10 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
     padding: 0.5em 0;
     margin: 0;
     background:
-        linear-gradient(45deg, rgba(255,255,255,0.05) 25%, transparent 25%),
-        linear-gradient(-45deg, rgba(255,255,255,0.05) 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, rgba(255,255,255,0.05) 75%),
-        linear-gradient(-45deg, transparent 75%, rgba(255,255,255,0.05) 75%);
+        linear-gradient(45deg, rgba(255, 255, 255, 0.05) 25%, transparent 25%),
+        linear-gradient(-45deg, rgba(255, 255, 255, 0.05) 25%, transparent 25%),
+        linear-gradient(45deg, transparent 75%, rgba(255, 255, 255, 0.05) 75%),
+        linear-gradient(-45deg, transparent 75%, rgba(255, 255, 255, 0.05) 75%);
     background-size: 6px 6px;
     background-position: 0 0, 0 3px, 3px -3px, -3px 0px;
     background-color: rgba(0, 0, 0, 0.3);
@@ -1670,8 +1702,15 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
 }
 
 @keyframes markerPulse {
-    0%, 100% { transform: translateY(0); }
-    50% { transform: translateY(-2px); }
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2px);
+    }
 }
 
 .rpg-location-text {
@@ -1724,9 +1763,9 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
 /* Recent Events Widget - Notebook Style */
 .rpg-events-widget {
     background: linear-gradient(to bottom,
-        rgba(255, 248, 220, 0.08) 0%,
-        rgba(255, 248, 220, 0.12) 50%,
-        rgba(255, 248, 220, 0.08) 100%);
+            rgba(255, 248, 220, 0.08) 0%,
+            rgba(255, 248, 220, 0.12) 50%,
+            rgba(255, 248, 220, 0.08) 100%);
     border: 2px solid var(--rpg-border);
     border-radius: 0.375em;
     padding: 0;
@@ -1747,12 +1786,10 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
     top: 0;
     width: 100%;
     height: 100%;
-    background-image: repeating-linear-gradient(
-        transparent,
-        transparent calc(1em + 0.5em),
-        rgba(var(--SmartThemeBorderColor), 0.08) calc(1em + 0.5em),
-        rgba(var(--SmartThemeBorderColor), 0.08) calc(1em + 0.6em)
-    );
+    background-image: repeating-linear-gradient(transparent,
+            transparent calc(1em + 0.5em),
+            rgba(var(--SmartThemeBorderColor), 0.08) calc(1em + 0.5em),
+            rgba(var(--SmartThemeBorderColor), 0.08) calc(1em + 0.6em));
     pointer-events: none;
     z-index: 0;
 }
@@ -1779,11 +1816,11 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
     height: 0.5em;
     border-radius: 50%;
     background: radial-gradient(circle at 30% 30%,
-        rgba(80, 80, 80, 0.4),
-        rgba(40, 40, 40, 0.6));
+            rgba(80, 80, 80, 0.4),
+            rgba(40, 40, 40, 0.6));
     border: 1px solid rgba(0, 0, 0, 0.5);
     box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.2),
-                0 1px 2px rgba(0, 0, 0, 0.3);
+        0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .rpg-notebook-title {
@@ -1934,7 +1971,9 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
     color: var(--rpg-text);
     opacity: 0.8;
     line-height: 1.2;
-}/* Old info line styles (legacy) */
+}
+
+/* Old info line styles (legacy) */
 .rpg-info-line {
     margin: 0.375em 0;
     padding: 0.375em 0.625em;
@@ -2013,8 +2052,10 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
     margin-bottom: 0.5em;
     background: rgba(0, 0, 0, 0.3);
     border-radius: 0.375em;
-    width: 100%; /* Ensure items take full width */
-    box-sizing: border-box; /* Include padding in width calculation */
+    width: 100%;
+    /* Ensure items take full width */
+    box-sizing: border-box;
+    /* Include padding in width calculation */
 }
 
 .rpg-thought-item:last-child {
@@ -2092,7 +2133,8 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
 }
 
 .rpg-thought-text::before {
-    content: ''; /* Explicitly ensure no emoji */
+    content: '';
+    /* Explicitly ensure no emoji */
 }
 
 /* Overlay to fade the background portrait and provide contrast */
@@ -2103,14 +2145,13 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(
-        135deg,
-        rgba(0, 0, 0, 0.85) 0%,
-        rgba(0, 0, 0, 0.75) 50%,
-        rgba(0, 0, 0, 0.85) 100%
-    );
+    background: linear-gradient(135deg,
+            rgba(0, 0, 0, 0.85) 0%,
+            rgba(0, 0, 0, 0.75) 50%,
+            rgba(0, 0, 0, 0.85) 100%);
     z-index: 1;
-    display: none; /* Hide background overlay for new format */
+    display: none;
+    /* Hide background overlay for new format */
 }
 
 /* Content wrapper to sit above the background */
@@ -2135,10 +2176,13 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
     border-radius: clamp(4px, 0.5vh, 6px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     transition: all 0.2s ease;
-    width: 100%; /* Ensure cards take full width */
+    width: 100%;
+    /* Ensure cards take full width */
     max-height: none;
-    box-sizing: border-box; /* Include padding and border in width calculation */
-    flex-shrink: 0; /* Prevent cards from shrinking */
+    box-sizing: border-box;
+    /* Include padding and border in width calculation */
+    flex-shrink: 0;
+    /* Prevent cards from shrinking */
     overflow: visible;
 }
 
@@ -2171,7 +2215,8 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
     border-radius: 50%;
     border: 2px solid var(--rpg-highlight);
     object-fit: cover;
-    display: block; /* Prevent inline spacing issues */
+    display: block;
+    /* Prevent inline spacing issues */
 }
 
 /* Uploadable avatar - make it clickable */
@@ -2261,7 +2306,8 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
     display: flex;
     align-items: center;
     gap: clamp(4px, 0.5vw, 6px);
-    flex-wrap: nowrap; /* Prevent wrapping */
+    flex-wrap: nowrap;
+    /* Prevent wrapping */
     flex: 1;
     min-width: 0;
 }
@@ -2278,7 +2324,8 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
     font-size: clamp(0.75rem, 0.75vw, 0.875rem);
     text-transform: uppercase;
     letter-spacing: 0.031em;
-    white-space: nowrap; /* Prevent name from wrapping */
+    white-space: nowrap;
+    /* Prevent name from wrapping */
     overflow: hidden;
     text-overflow: ellipsis;
     flex: 1;
@@ -2357,7 +2404,8 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
     color: var(--rpg-text);
     opacity: 0.8;
     line-height: 1.3;
-    overflow-wrap: break-word; /* Allow long text to wrap */
+    overflow-wrap: break-word;
+    /* Allow long text to wrap */
     word-wrap: break-word;
 }
 
@@ -2602,9 +2650,12 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
 
 /* Animation for stats updates */
 @keyframes pulse {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 1;
     }
+
     50% {
         opacity: 0.6;
     }
@@ -2613,6 +2664,7 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
 .rpg-stat-row.updating {
     animation: pulse 0.5s ease-in-out;
 }
+
 /* ============================================
    SETTINGS SECTION
    ============================================ */
@@ -3263,12 +3315,10 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
 }
 
 .rpg-panel[data-theme="sci-fi"] .rpg-thoughts-content::before {
-    background: linear-gradient(
-        135deg,
-        rgba(10, 14, 39, 0.9) 0%,
-        rgba(26, 31, 58, 0.8) 50%,
-        rgba(10, 14, 39, 0.9) 100%
-    );
+    background: linear-gradient(135deg,
+            rgba(10, 14, 39, 0.9) 0%,
+            rgba(26, 31, 58, 0.8) 50%,
+            rgba(10, 14, 39, 0.9) 100%);
 }
 
 /* Fantasy / Rustic Parchment Theme */
@@ -3321,12 +3371,10 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
 }
 
 .rpg-panel[data-theme="fantasy"] .rpg-thoughts-content::before {
-    background: linear-gradient(
-        135deg,
-        rgba(43, 24, 16, 0.92) 0%,
-        rgba(61, 36, 20, 0.88) 50%,
-        rgba(43, 24, 16, 0.92) 100%
-    );
+    background: linear-gradient(135deg,
+            rgba(43, 24, 16, 0.92) 0%,
+            rgba(61, 36, 20, 0.88) 50%,
+            rgba(43, 24, 16, 0.92) 100%);
 }
 
 /* Cyberpunk / Neon Grid Theme */
@@ -3380,12 +3428,10 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
 }
 
 .rpg-panel[data-theme="cyberpunk"] .rpg-thoughts-content::before {
-    background: linear-gradient(
-        135deg,
-        rgba(0, 0, 0, 0.92) 0%,
-        rgba(13, 13, 13, 0.85) 50%,
-        rgba(0, 0, 0, 0.92) 100%
-    );
+    background: linear-gradient(135deg,
+            rgba(0, 0, 0, 0.92) 0%,
+            rgba(13, 13, 13, 0.85) 50%,
+            rgba(0, 0, 0, 0.92) 100%);
 }
 
 /* ============================================
@@ -3640,6 +3686,7 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
         opacity: 0;
         transform: translateY(0.625rem);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -3655,11 +3702,25 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
     animation-fill-mode: both;
 }
 
-.rpg-stat-row:nth-child(1) { animation-delay: 0.1s; }
-.rpg-stat-row:nth-child(2) { animation-delay: 0.15s; }
-.rpg-stat-row:nth-child(3) { animation-delay: 0.2s; }
-.rpg-stat-row:nth-child(4) { animation-delay: 0.25s; }
-.rpg-stat-row:nth-child(5) { animation-delay: 0.3s; }
+.rpg-stat-row:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.rpg-stat-row:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.rpg-stat-row:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+.rpg-stat-row:nth-child(4) {
+    animation-delay: 0.25s;
+}
+
+.rpg-stat-row:nth-child(5) {
+    animation-delay: 0.3s;
+}
 
 /* ============================================
    DICE ROLL MODAL - MOBILE FIRST
@@ -3945,13 +4006,23 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
 
 /* Animations */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 @keyframes fadeOut {
-    from { opacity: 1; }
-    to { opacity: 0; }
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
 }
 
 @keyframes slideInUp {
@@ -3959,6 +4030,7 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
         opacity: 0;
         transform: translateY(20px) scale(0.95);
     }
+
     to {
         opacity: 1;
         transform: translateY(0) scale(1);
@@ -3966,16 +4038,39 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
 }
 
 @keyframes diceRoll {
-    0%, 100% { transform: rotate(0deg); }
-    25% { transform: rotate(90deg) scale(1.1); }
-    50% { transform: rotate(180deg); }
-    75% { transform: rotate(270deg) scale(1.1); }
+
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+
+    25% {
+        transform: rotate(90deg) scale(1.1);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    75% {
+        transform: rotate(270deg) scale(1.1);
+    }
 }
 
 @keyframes resultPop {
-    0% { transform: scale(0); opacity: 0; }
-    50% { transform: scale(1.1); }
-    100% { transform: scale(1); opacity: 1; }
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 /* Theme Support - CSS Custom Properties */
@@ -4563,7 +4658,8 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
     background: var(--rpg-accent);
     border: 1px solid var(--rpg-border);
     border-radius: 0.375em;
-    min-width: 0; /* Allow grid items to shrink below content size */
+    min-width: 0;
+    /* Allow grid items to shrink below content size */
 }
 
 .rpg-field-controls {
@@ -4606,8 +4702,10 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
     overflow-wrap: break-word;
     overflow: hidden;
     text-overflow: ellipsis;
-    min-width: 0; /* Allow input to shrink */
-    width: 100%; /* Fill available grid space */
+    min-width: 0;
+    /* Allow input to shrink */
+    width: 100%;
+    /* Fill available grid space */
     box-sizing: border-box;
 }
 
@@ -5180,19 +5278,24 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
 /* Floating thought panel - positioned next to character avatar */
 #rpg-thought-panel {
     position: fixed;
-    z-index: 1000; /* Lower z-index to stay below dropdown menus */
+    z-index: 1000;
+    /* Lower z-index to stay below dropdown menus */
     pointer-events: auto;
-    max-width: 350px; /* Fixed max like panels, will be constrained by viewport */
+    max-width: 350px;
+    /* Fixed max like panels, will be constrained by viewport */
     width: auto;
-    transform: translateY(0); /* No vertical centering - align with avatar top */
+    transform: translateY(0);
+    /* No vertical centering - align with avatar top */
     animation: thoughtPanelFadeIn 0.4s ease-out;
 }
 
 /* Collapsed thought icon */
 #rpg-thought-icon {
     position: fixed;
-    z-index: 1000; /* Lower z-index to stay below dropdown menus */
-    display: none; /* Hidden by default in desktop */
+    z-index: 1000;
+    /* Lower z-index to stay below dropdown menus */
+    display: none;
+    /* Hidden by default in desktop */
     align-items: center;
     justify-content: center;
     width: 44px;
@@ -5278,10 +5381,13 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
 }
 
 @keyframes thoughtIconPulse {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scale(1);
         box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
     }
+
     50% {
         transform: scale(1.05);
         box-shadow: 0 6px 20px rgba(233, 69, 96, 0.3);
@@ -5292,8 +5398,10 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
 .rpg-thought-circles {
     position: absolute;
     display: flex;
-    flex-direction: row-reverse; /* Horizontal layout, flipped */
-    align-items: center; /* Center vertically */
+    flex-direction: row-reverse;
+    /* Horizontal layout, flipped */
+    align-items: center;
+    /* Center vertically */
     gap: 0.5em;
     inset: 0px -50px auto;
     z-index: 1;
@@ -5302,7 +5410,8 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
 /* Flip thought circles to left side when panel is on left */
 .rpg-thought-panel-right .rpg-thought-circles {
     inset: 0px auto auto -50px;
-    flex-direction: row; /* Normal order for left side */
+    flex-direction: row;
+    /* Normal order for left side */
 }
 
 .rpg-thought-circle {
@@ -5339,7 +5448,8 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
     position: relative;
     backdrop-filter: blur(15px);
-    max-height: calc(100vh - 120px); /* Scale with viewport height */
+    max-height: calc(100vh - 120px);
+    /* Scale with viewport height */
     overflow-y: auto;
     overflow-x: hidden;
 }
@@ -5469,6 +5579,7 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
         opacity: 0;
         transform: translateY(-50%) scale(0.9);
     }
+
     to {
         opacity: 1;
         transform: translateY(-50%) scale(1);
@@ -5476,10 +5587,13 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
 }
 
 @keyframes thoughtCirclePulse {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.3;
         transform: scale(0.8);
     }
+
     50% {
         opacity: 0.8;
         transform: scale(1.1);
@@ -5540,9 +5654,11 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(10px);
     transition: transform 0.2s ease, box-shadow 0.2s ease, top 0.3s ease, left 0.3s ease, right 0.3s ease, bottom 0.3s ease;
-    user-select: none; /* Prevent text selection while dragging */
+    user-select: none;
+    /* Prevent text selection while dragging */
     -webkit-user-select: none;
-    will-change: top, left; /* Optimize for position changes */
+    will-change: top, left;
+    /* Optimize for position changes */
 }
 
 /* Center the icon inside */
@@ -5698,6 +5814,7 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
         from {
             transform: translateX(100%);
         }
+
         to {
             transform: translateX(0);
         }
@@ -5708,6 +5825,7 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
         from {
             transform: translateX(0);
         }
+
         to {
             transform: translateX(100%);
         }
@@ -5718,6 +5836,7 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
         from {
             transform: translateX(-100%);
         }
+
         to {
             transform: translateX(0);
         }
@@ -5728,6 +5847,7 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
         from {
             transform: translateX(0);
         }
+
         to {
             transform: translateX(-100%);
         }
@@ -5924,7 +6044,7 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
     }
 
     /* When empty state is shown, center it in the full panel */
-    .rpg-mobile-tab-content #rpg-user-stats > .rpg-inventory-empty {
+    .rpg-mobile-tab-content #rpg-user-stats>.rpg-inventory-empty {
         margin: auto;
     }
 
@@ -5934,8 +6054,15 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
     }
 
     @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(10px); }
-        to { opacity: 1; transform: translateY(0); }
+        from {
+            opacity: 0;
+            transform: translateY(10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
     }
 
     /* Info tab contains Info Box and Characters with 50/50 split */
@@ -5949,8 +6076,8 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
     }
 
     /* Info Box takes 50% of vertical space */
-    .rpg-mobile-tab-content[data-tab-content="info"] > #rpg-info-box,
-    .rpg-mobile-tab-content[data-tab-content="info"] > .rpg-info-section {
+    .rpg-mobile-tab-content[data-tab-content="info"]>#rpg-info-box,
+    .rpg-mobile-tab-content[data-tab-content="info"]>.rpg-info-section {
         min-height: 0;
         overflow-y: auto;
         padding-bottom: 16px;
@@ -5960,15 +6087,15 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
     }
 
     /* Characters section takes 50% of vertical space */
-    .rpg-mobile-tab-content[data-tab-content="info"] > #rpg-thoughts,
-    .rpg-mobile-tab-content[data-tab-content="info"] > .rpg-thoughts-section {
+    .rpg-mobile-tab-content[data-tab-content="info"]>#rpg-thoughts,
+    .rpg-mobile-tab-content[data-tab-content="info"]>.rpg-thoughts-section {
         min-height: 0;
         overflow-y: auto;
         padding-bottom: 16px;
     }
 
     /* Add divider between Info and Characters */
-    .rpg-mobile-tab-content[data-tab-content="info"] > .rpg-section:not(:last-child) {
+    .rpg-mobile-tab-content[data-tab-content="info"]>.rpg-section:not(:last-child) {
         border-bottom: 1px solid var(--SmartThemeBorderColor);
         margin-bottom: 16px;
     }
@@ -5984,7 +6111,8 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
 
     /* Rows scale proportionally to fill Info Box */
     .rpg-dashboard-row-1 {
-        height: auto !important;  /* Remove desktop height constraint */
+        height: auto !important;
+        /* Remove desktop height constraint */
         display: flex !important;
         gap: 0.25em;
     }
@@ -6078,11 +6206,14 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
     /* Make the entire stats section a single column grid */
     .rpg-stats-section {
         display: grid !important;
-        grid-template-columns: 1fr !important; /* Single column */
-        grid-template-rows: auto !important; /* Auto rows - everything stacked */
+        grid-template-columns: 1fr !important;
+        /* Single column */
+        grid-template-rows: auto !important;
+        /* Auto rows - everything stacked */
         gap: 12px;
         padding: 16px 12px;
-        overflow-y: auto !important; /* Enable scrolling on the grid container */
+        overflow-y: auto !important;
+        /* Enable scrolling on the grid container */
         min-height: 0;
     }
 
@@ -6362,7 +6493,8 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
     .rpg-dice-display {
         font-size: clamp(12px, 3.1vw, 16px) !important;
         padding: clamp(8px, 2vw, 12px) !important;
-        min-height: 44px; /* Touch-friendly height */
+        min-height: 44px;
+        /* Touch-friendly height */
         gap: clamp(6px, 1.5vw, 10px) !important;
     }
 
@@ -6417,7 +6549,8 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
 
     /* Make Recent Events section take less vertical space on mobile */
     .rpg-dashboard-row-3 {
-        max-height: 100px !important; /* Limit height on mobile */
+        max-height: 100px !important;
+        /* Limit height on mobile */
     }
 
     /* Make the events widget scrollable if content exceeds height */
@@ -6671,8 +6804,8 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
     }
 
     /* Checkbox and main label on first row */
-    .rpg-editor-widget-row > input[type="checkbox"],
-    .rpg-editor-widget-row > label {
+    .rpg-editor-widget-row>input[type="checkbox"],
+    .rpg-editor-widget-row>label {
         flex: 0 0 auto;
     }
 
@@ -6706,10 +6839,13 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
 
 /* Very narrow screens - single column layout for all stats */
 @media (max-width: 600px) {
+
     /* Change grid to single column */
     .rpg-stats-section {
-        grid-template-columns: 1fr !important; /* Single column */
-        grid-template-rows: auto !important; /* Auto rows */
+        grid-template-columns: 1fr !important;
+        /* Single column */
+        grid-template-rows: auto !important;
+        /* Auto rows */
     }
 
     /* User info row - full width, row 1 */
@@ -6744,8 +6880,10 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
 
     /* Make attributes grid single column too for readability */
     .rpg-classic-stats-grid {
-        grid-template-columns: repeat(3, 1fr) !important; /* 3 columns for attributes */
-        grid-template-rows: repeat(2, 1fr) !important; /* 2 rows */
+        grid-template-columns: repeat(3, 1fr) !important;
+        /* 3 columns for attributes */
+        grid-template-rows: repeat(2, 1fr) !important;
+        /* 2 rows */
     }
 }
 
@@ -6762,6 +6900,7 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
 
 /* Touch-friendly improvements for mobile */
 @media (max-width: 768px) {
+
     /* More padding for editable fields */
     .rpg-editable {
         padding: 0.5em;
@@ -7872,6 +8011,7 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
    Apply to screens up to 1000px
    ======================================== */
 @media (max-width: 1000px) {
+
     /* Collapse toggle button */
     .rpg-collapse-toggle {
         font-size: clamp(16px, 3vw, 20px) !important;
@@ -7960,6 +8100,7 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
         opacity: 0;
         transform: translateX(-10px);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -8036,7 +8177,8 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
     height: 100dvh;
     min-width: 100vw;
     min-height: 100dvh;
-    z-index: 99999; /* Increased from 10000 to ensure it's on top */
+    z-index: 99999;
+    /* Increased from 10000 to ensure it's on top */
     display: none;
     opacity: 0;
     transition: opacity 0.3s ease;
@@ -8045,12 +8187,17 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
 .rpg-encounter-modal.is-open {
     display: flex;
     opacity: 1;
-    align-items: flex-start; /* Changed from center to flex-start */
+    align-items: flex-start;
+    /* Changed from center to flex-start */
     justify-content: center;
-    padding: 2vh 0; /* Add vertical padding */
-    overflow-y: auto; /* Allow modal itself to scroll if container is too tall */
-    min-height: 100dvh; /* Force full viewport height */
-    min-width: 100vw; /* Force full viewport width */
+    padding: 2vh 0;
+    /* Add vertical padding */
+    overflow-y: auto;
+    /* Allow modal itself to scroll if container is too tall */
+    min-height: 100dvh;
+    /* Force full viewport height */
+    min-width: 100vw;
+    /* Force full viewport width */
 }
 
 /* Overlay */
@@ -8062,7 +8209,8 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
     height: 100%;
     background: rgba(0, 0, 0, 0.85);
     backdrop-filter: blur(4px);
-    z-index: 1; /* Ensure overlay is stacked properly */
+    z-index: 1;
+    /* Ensure overlay is stacked properly */
 }
 
 /* Container */
@@ -8070,8 +8218,10 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
     position: relative;
     width: 85vw;
     max-width: 1600px;
-    min-height: 400px; /* Ensure minimum height */
-    height: 85vh; /* Revert to fixed height for flex to work */
+    min-height: 400px;
+    /* Ensure minimum height */
+    height: 85vh;
+    /* Revert to fixed height for flex to work */
     max-height: 90vh;
     background: var(--rpg-bg, #1a1a2e);
     border: 2px solid var(--rpg-border, #4a7ba7);
@@ -8081,7 +8231,8 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
     flex-direction: column;
     overflow: hidden;
     animation: encounter-modal-in 0.3s ease-out;
-    z-index: 2; /* Ensure container is above overlay */
+    z-index: 2;
+    /* Ensure container is above overlay */
 }
 
 @keyframes encounter-modal-in {
@@ -8089,6 +8240,7 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
         opacity: 0;
         transform: scale(0.9) translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: scale(1) translateY(0);
@@ -8862,7 +9014,7 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
     z-index: 0;
 }
 
-.rpg-encounter-modal[data-atmosphere="dark"] .rpg-encounter-container > * {
+.rpg-encounter-modal[data-atmosphere="dark"] .rpg-encounter-container>* {
     position: relative;
     z-index: 1;
 }
@@ -8880,7 +9032,7 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
     z-index: 0;
 }
 
-.rpg-encounter-modal[data-atmosphere="bright"] .rpg-encounter-container > * {
+.rpg-encounter-modal[data-atmosphere="bright"] .rpg-encounter-container>* {
     position: relative;
     z-index: 1;
 }
@@ -8903,7 +9055,7 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
     z-index: 0;
 }
 
-.rpg-encounter-modal[data-atmosphere="eerie"] .rpg-encounter-container > * {
+.rpg-encounter-modal[data-atmosphere="eerie"] .rpg-encounter-container>* {
     position: relative;
     z-index: 1;
 }
@@ -8929,8 +9081,8 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
     z-index: 0;
 }
 
-.rpg-encounter-modal[data-time="dawn"] .rpg-encounter-container > *,
-.rpg-encounter-modal[data-time="dusk"] .rpg-encounter-container > * {
+.rpg-encounter-modal[data-time="dawn"] .rpg-encounter-container>*,
+.rpg-encounter-modal[data-time="dusk"] .rpg-encounter-container>* {
     position: relative;
     z-index: 1;
 }
@@ -8939,7 +9091,8 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
 @media (max-width: 768px) {
     .rpg-encounter-modal {
         /* Fix for mobile viewport height with address bars */
-        height: 100dvh; /* Dynamic viewport height for mobile browsers */
+        height: 100dvh;
+        /* Dynamic viewport height for mobile browsers */
         min-height: 100dvh;
     }
 
@@ -9265,6 +9418,7 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
     border-color: var(--rpg-highlight);
     box-shadow: 0 0 15px var(--rpg-shadow);
 }
+
 /* ============================================
    TARGET SELECTION MODAL
    ============================================ */
@@ -9505,6 +9659,7 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
 
 /* Extra small screens - icon-only mode */
 @media (max-width: 400px) {
+
     #rpg-plot-random,
     #rpg-plot-natural,
     #rpg-encounter-button {
@@ -9548,6 +9703,7 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
         opacity: 0;
         transform: translateY(10px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -9590,7 +9746,8 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
 /* Song Info Container */
 .rpg-music-widget-info {
     flex: 1;
-    min-width: 0; /* Allows text truncation */
+    min-width: 0;
+    /* Allows text truncation */
     display: flex;
     flex-direction: column;
     gap: 2px;
@@ -9648,7 +9805,8 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
 }
 
 .rpg-music-widget-play i {
-    margin-left: 2px; /* Visual centering for play icon */
+    margin-left: 2px;
+    /* Visual centering for play icon */
 }
 
 /* Close/Dismiss Button */
@@ -9757,35 +9915,36 @@ body:has(.rpg-panel.rpg-mobile-open) .rpg-fab-widget-container {
 }
 
 /* Theme Support - Apply theme colors */
-.rpg-panel[data-theme="sci-fi"] ~ .rpg-music-widget .rpg-music-widget-content,
+.rpg-panel[data-theme="sci-fi"]~.rpg-music-widget .rpg-music-widget-content,
 body[data-theme="sci-fi"] .rpg-music-widget-content {
     background: linear-gradient(135deg, #8b00ff 0%, #6a00cc 50%, #5000aa 100%);
 }
 
-.rpg-panel[data-theme="sci-fi"] ~ .rpg-music-widget .rpg-music-widget-play,
+.rpg-panel[data-theme="sci-fi"]~.rpg-music-widget .rpg-music-widget-play,
 body[data-theme="sci-fi"] .rpg-music-widget-play {
     color: #8b00ff;
 }
 
-.rpg-panel[data-theme="fantasy"] ~ .rpg-music-widget .rpg-music-widget-content,
+.rpg-panel[data-theme="fantasy"]~.rpg-music-widget .rpg-music-widget-content,
 body[data-theme="fantasy"] .rpg-music-widget-content {
     background: linear-gradient(135deg, #d4af37 0%, #b8962e 50%, #9c7d25 100%);
 }
 
-.rpg-panel[data-theme="fantasy"] ~ .rpg-music-widget .rpg-music-widget-play,
+.rpg-panel[data-theme="fantasy"]~.rpg-music-widget .rpg-music-widget-play,
 body[data-theme="fantasy"] .rpg-music-widget-play {
     color: #d4af37;
 }
 
-.rpg-panel[data-theme="cyberpunk"] ~ .rpg-music-widget .rpg-music-widget-content,
+.rpg-panel[data-theme="cyberpunk"]~.rpg-music-widget .rpg-music-widget-content,
 body[data-theme="cyberpunk"] .rpg-music-widget-content {
     background: linear-gradient(135deg, #ff2a6d 0%, #d91e58 50%, #b31848 100%);
 }
 
-.rpg-panel[data-theme="cyberpunk"] ~ .rpg-music-widget .rpg-music-widget-play,
+.rpg-panel[data-theme="cyberpunk"]~.rpg-music-widget .rpg-music-widget-play,
 body[data-theme="cyberpunk"] .rpg-music-widget-play {
     color: #ff2a6d;
 }
+
 /* ============================================
    SNOWFLAKES EFFECT
    ============================================ */
@@ -9820,6 +9979,7 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
         transform: translateY(0) rotate(0deg);
         opacity: 0.8;
     }
+
     100% {
         transform: translateY(100dvh) rotate(360deg);
         opacity: 0.2;
@@ -9865,7 +10025,8 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
     left: 0;
     width: 100vw;
     height: 100vh;
-    height: 100dvh; /* Dynamic viewport height for mobile browsers */
+    height: 100dvh;
+    /* Dynamic viewport height for mobile browsers */
     pointer-events: none;
     z-index: 1;
     overflow: hidden;
@@ -9890,6 +10051,7 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
         transform: translateY(0);
         opacity: 0.8;
     }
+
     100% {
         transform: translateY(100dvh);
         opacity: 0.3;
@@ -9916,10 +10078,13 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
 }
 
 @keyframes rpg-mistFloat {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateX(-10%) scale(1);
         opacity: 0.15;
     }
+
     50% {
         transform: translateX(10%) scale(1.1);
         opacity: 0.25;
@@ -9951,17 +10116,20 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
     width: 100%;
     height: 100%;
     background: radial-gradient(ellipse at 15% 10%,
-        rgba(255, 245, 200, 0.15) 0%,
-        rgba(255, 240, 180, 0.08) 30%,
-        transparent 70%);
+            rgba(255, 245, 200, 0.15) 0%,
+            rgba(255, 240, 180, 0.08) 30%,
+            transparent 70%);
     animation: rpg-clear-ambient-pulse 8s ease-in-out infinite;
     pointer-events: none;
 }
 
 @keyframes rpg-clear-ambient-pulse {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.6;
     }
+
     50% {
         opacity: 1;
     }
@@ -9972,9 +10140,9 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
     position: fixed;
     border-radius: 50%;
     background: radial-gradient(circle at 30% 30%,
-        rgba(255, 250, 220, 0.9) 0%,
-        rgba(255, 235, 180, 0.6) 50%,
-        rgba(255, 220, 150, 0) 100%);
+            rgba(255, 250, 220, 0.9) 0%,
+            rgba(255, 235, 180, 0.6) 50%,
+            rgba(255, 220, 150, 0) 100%);
     box-shadow: 0 0 6px 2px rgba(255, 245, 200, 0.4);
     animation: rpg-clear-dust-float linear infinite;
     pointer-events: none;
@@ -9985,16 +10153,20 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
         transform: translate(0, 0) scale(1);
         opacity: 0;
     }
+
     10% {
         opacity: 0.8;
     }
+
     50% {
         transform: translate(30px, -50px) scale(1.2);
         opacity: 0.6;
     }
+
     90% {
         opacity: 0.8;
     }
+
     100% {
         transform: translate(60px, -100px) scale(1);
         opacity: 0;
@@ -10006,27 +10178,32 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
     position: fixed;
     border-radius: 50%;
     background: radial-gradient(circle at center,
-        rgba(255, 250, 230, 0.12) 0%,
-        rgba(255, 245, 200, 0.06) 40%,
-        transparent 70%);
+            rgba(255, 250, 230, 0.12) 0%,
+            rgba(255, 245, 200, 0.06) 40%,
+            transparent 70%);
     filter: blur(20px);
     animation: rpg-clear-orb-drift ease-in-out infinite;
     pointer-events: none;
 }
 
 @keyframes rpg-clear-orb-drift {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translate(0, 0) scale(1);
         opacity: 0.4;
     }
+
     25% {
         transform: translate(20px, 15px) scale(1.1);
         opacity: 0.6;
     }
+
     50% {
         transform: translate(-10px, 30px) scale(0.95);
         opacity: 0.5;
     }
+
     75% {
         transform: translate(-25px, 10px) scale(1.05);
         opacity: 0.7;
@@ -10039,11 +10216,11 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
     width: 50px;
     height: 50px;
     background: radial-gradient(circle at 40% 40%,
-        rgba(255, 255, 240, 1) 0%,
-        rgba(255, 250, 200, 1) 30%,
-        rgba(255, 220, 120, 0.9) 60%,
-        rgba(255, 180, 80, 0.6) 80%,
-        rgba(255, 150, 50, 0) 100%);
+            rgba(255, 255, 240, 1) 0%,
+            rgba(255, 250, 200, 1) 30%,
+            rgba(255, 220, 120, 0.9) 60%,
+            rgba(255, 180, 80, 0.6) 80%,
+            rgba(255, 150, 50, 0) 100%);
     border-radius: 50%;
     box-shadow:
         0 0 30px 10px rgba(255, 220, 100, 0.5),
@@ -10055,13 +10232,16 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
 }
 
 @keyframes rpg-clear-sun-pulse {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translate(-50%, -50%) scale(1);
         box-shadow:
             0 0 30px 10px rgba(255, 220, 100, 0.5),
             0 0 60px 20px rgba(255, 200, 80, 0.3),
             0 0 100px 40px rgba(255, 180, 60, 0.15);
     }
+
     50% {
         transform: translate(-50%, -50%) scale(1.05);
         box-shadow:
@@ -10077,10 +10257,10 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
     width: 150px;
     height: 150px;
     background: radial-gradient(circle at center,
-        rgba(255, 240, 180, 0.25) 0%,
-        rgba(255, 220, 150, 0.15) 30%,
-        rgba(255, 200, 120, 0.08) 50%,
-        transparent 70%);
+            rgba(255, 240, 180, 0.25) 0%,
+            rgba(255, 220, 150, 0.15) 30%,
+            rgba(255, 200, 120, 0.08) 50%,
+            transparent 70%);
     border-radius: 50%;
     transform: translate(-50%, -50%);
     filter: blur(8px);
@@ -10089,10 +10269,13 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
 }
 
 @keyframes rpg-clear-sun-glow-pulse {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.7;
         transform: translate(-50%, -50%) scale(1);
     }
+
     50% {
         opacity: 1;
         transform: translate(-50%, -50%) scale(1.15);
@@ -10113,12 +10296,12 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
     width: 100vw;
     height: 100dvh;
     background: linear-gradient(to bottom,
-        rgba(40, 30, 80, 0.1) 0%,
-        rgba(120, 60, 120, 0.08) 15%,
-        rgba(200, 100, 100, 0.1) 35%,
-        rgba(255, 140, 100, 0.12) 55%,
-        rgba(255, 180, 120, 0.1) 75%,
-        rgba(255, 200, 150, 0.08) 100%);
+            rgba(40, 30, 80, 0.1) 0%,
+            rgba(120, 60, 120, 0.08) 15%,
+            rgba(200, 100, 100, 0.1) 35%,
+            rgba(255, 140, 100, 0.12) 55%,
+            rgba(255, 180, 120, 0.1) 75%,
+            rgba(255, 200, 150, 0.08) 100%);
     animation: rpg-sunrise-sky-transition 30s ease-in-out infinite alternate;
     pointer-events: none;
 }
@@ -10127,6 +10310,7 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
     0% {
         opacity: 0.8;
     }
+
     100% {
         opacity: 1;
     }
@@ -10135,11 +10319,11 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
 /* Sunrise sun - more orange/red */
 .rpg-sunrise-sun {
     background: radial-gradient(circle at 40% 40%,
-        rgba(255, 255, 220, 1) 0%,
-        rgba(255, 220, 150, 1) 30%,
-        rgba(255, 160, 80, 0.9) 60%,
-        rgba(255, 100, 50, 0.6) 80%,
-        rgba(255, 80, 30, 0) 100%) !important;
+            rgba(255, 255, 220, 1) 0%,
+            rgba(255, 220, 150, 1) 30%,
+            rgba(255, 160, 80, 0.9) 60%,
+            rgba(255, 100, 50, 0.6) 80%,
+            rgba(255, 80, 30, 0) 100%) !important;
     box-shadow:
         0 0 40px 15px rgba(255, 180, 100, 0.6),
         0 0 80px 30px rgba(255, 140, 80, 0.4),
@@ -10149,10 +10333,10 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
 /* Sunrise sun glow - warm orange */
 .rpg-sunrise-glow {
     background: radial-gradient(circle at center,
-        rgba(255, 200, 150, 0.35) 0%,
-        rgba(255, 160, 100, 0.2) 30%,
-        rgba(255, 120, 80, 0.1) 50%,
-        transparent 70%) !important;
+            rgba(255, 200, 150, 0.35) 0%,
+            rgba(255, 160, 100, 0.2) 30%,
+            rgba(255, 120, 80, 0.1) 50%,
+            transparent 70%) !important;
 }
 
 /* Horizon glow for sunrise */
@@ -10163,19 +10347,22 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
     width: 100vw;
     height: 40dvh;
     background: linear-gradient(to top,
-        rgba(255, 160, 100, 0.15) 0%,
-        rgba(255, 140, 90, 0.1) 20%,
-        rgba(255, 120, 80, 0.05) 50%,
-        rgba(255, 100, 70, 0.02) 75%,
-        transparent 100%);
+            rgba(255, 160, 100, 0.15) 0%,
+            rgba(255, 140, 90, 0.1) 20%,
+            rgba(255, 120, 80, 0.05) 50%,
+            rgba(255, 100, 70, 0.02) 75%,
+            transparent 100%);
     animation: rpg-horizon-glow-pulse 8s ease-in-out infinite;
     pointer-events: none;
 }
 
 @keyframes rpg-horizon-glow-pulse {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.7;
     }
+
     50% {
         opacity: 1;
     }
@@ -10188,9 +10375,12 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
 }
 
 @keyframes rpg-star-fade-out {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.2;
     }
+
     50% {
         opacity: 0.4;
     }
@@ -10210,13 +10400,13 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
     width: 100vw;
     height: 100dvh;
     background: linear-gradient(to bottom,
-        rgba(30, 20, 60, 0.12) 0%,
-        rgba(80, 40, 100, 0.1) 15%,
-        rgba(150, 60, 90, 0.12) 30%,
-        rgba(220, 80, 70, 0.12) 50%,
-        rgba(255, 120, 80, 0.12) 70%,
-        rgba(255, 160, 100, 0.1) 85%,
-        rgba(255, 180, 120, 0.06) 100%);
+            rgba(30, 20, 60, 0.12) 0%,
+            rgba(80, 40, 100, 0.1) 15%,
+            rgba(150, 60, 90, 0.12) 30%,
+            rgba(220, 80, 70, 0.12) 50%,
+            rgba(255, 120, 80, 0.12) 70%,
+            rgba(255, 160, 100, 0.1) 85%,
+            rgba(255, 180, 120, 0.06) 100%);
     animation: rpg-sunset-sky-transition 30s ease-in-out infinite alternate;
     pointer-events: none;
 }
@@ -10225,6 +10415,7 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
     0% {
         opacity: 1;
     }
+
     100% {
         opacity: 0.8;
     }
@@ -10233,11 +10424,11 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
 /* Sunset sun - more red/deep orange */
 .rpg-sunset-sun {
     background: radial-gradient(circle at 40% 40%,
-        rgba(255, 240, 200, 1) 0%,
-        rgba(255, 180, 100, 1) 30%,
-        rgba(255, 120, 60, 0.9) 60%,
-        rgba(255, 80, 40, 0.6) 80%,
-        rgba(200, 50, 30, 0) 100%) !important;
+            rgba(255, 240, 200, 1) 0%,
+            rgba(255, 180, 100, 1) 30%,
+            rgba(255, 120, 60, 0.9) 60%,
+            rgba(255, 80, 40, 0.6) 80%,
+            rgba(200, 50, 30, 0) 100%) !important;
     box-shadow:
         0 0 40px 15px rgba(255, 140, 80, 0.6),
         0 0 80px 30px rgba(255, 100, 60, 0.4),
@@ -10247,10 +10438,10 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
 /* Sunset sun glow - deep orange/red */
 .rpg-sunset-glow {
     background: radial-gradient(circle at center,
-        rgba(255, 160, 120, 0.35) 0%,
-        rgba(255, 120, 80, 0.2) 30%,
-        rgba(200, 80, 60, 0.1) 50%,
-        transparent 70%) !important;
+            rgba(255, 160, 120, 0.35) 0%,
+            rgba(255, 120, 80, 0.2) 30%,
+            rgba(200, 80, 60, 0.1) 50%,
+            transparent 70%) !important;
 }
 
 /* Horizon glow for sunset */
@@ -10261,11 +10452,11 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
     width: 100vw;
     height: 45dvh;
     background: linear-gradient(to top,
-        rgba(255, 120, 60, 0.18) 0%,
-        rgba(255, 100, 50, 0.12) 20%,
-        rgba(220, 70, 50, 0.06) 45%,
-        rgba(150, 50, 60, 0.02) 70%,
-        transparent 100%);
+            rgba(255, 120, 60, 0.18) 0%,
+            rgba(255, 100, 50, 0.12) 20%,
+            rgba(220, 70, 50, 0.06) 45%,
+            rgba(150, 50, 60, 0.02) 70%,
+            transparent 100%);
     animation: rpg-horizon-glow-pulse 8s ease-in-out infinite;
     pointer-events: none;
 }
@@ -10276,9 +10467,12 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
 }
 
 @keyframes rpg-star-emerge {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.3;
     }
+
     50% {
         opacity: 0.7;
     }
@@ -10287,9 +10481,9 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
 /* Sunset dust motes - pinkish tint */
 .rpg-sunset-dust {
     background: radial-gradient(circle at 30% 30%,
-        rgba(255, 200, 180, 0.9) 0%,
-        rgba(255, 180, 160, 0.6) 50%,
-        rgba(255, 160, 140, 0) 100%) !important;
+            rgba(255, 200, 180, 0.9) 0%,
+            rgba(255, 180, 160, 0.6) 50%,
+            rgba(255, 160, 140, 0) 100%) !important;
     box-shadow: 0 0 6px 2px rgba(255, 180, 160, 0.4) !important;
 }
 
@@ -10301,10 +10495,10 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
     width: 150px;
     height: 150px;
     background: radial-gradient(circle at center,
-        rgba(255, 255, 255, 0.3) 0%,
-        rgba(255, 250, 220, 0.15) 20%,
-        rgba(255, 240, 180, 0.08) 40%,
-        transparent 60%);
+            rgba(255, 255, 255, 0.3) 0%,
+            rgba(255, 250, 220, 0.15) 20%,
+            rgba(255, 240, 180, 0.08) 40%,
+            transparent 60%);
     border-radius: 50%;
     animation: rpg-clear-lens-flare-pulse 6s ease-in-out infinite;
     pointer-events: none;
@@ -10319,9 +10513,9 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
     height: 60px;
     transform: translate(-50%, -50%);
     background: radial-gradient(circle at center,
-        rgba(255, 255, 255, 0.5) 0%,
-        rgba(255, 250, 230, 0.2) 50%,
-        transparent 70%);
+            rgba(255, 255, 255, 0.5) 0%,
+            rgba(255, 250, 230, 0.2) 50%,
+            transparent 70%);
     border-radius: 50%;
     animation: rpg-clear-lens-core-pulse 4s ease-in-out infinite;
 }
@@ -10334,18 +10528,21 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
     width: 40px;
     height: 40px;
     background: radial-gradient(circle at center,
-        rgba(255, 200, 150, 0.4) 0%,
-        rgba(255, 180, 100, 0.1) 50%,
-        transparent 70%);
+            rgba(255, 200, 150, 0.4) 0%,
+            rgba(255, 180, 100, 0.1) 50%,
+            transparent 70%);
     border-radius: 50%;
     animation: rpg-clear-secondary-flare 8s ease-in-out infinite;
 }
 
 @keyframes rpg-clear-lens-flare-pulse {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.7;
         transform: scale(1);
     }
+
     50% {
         opacity: 1;
         transform: scale(1.1);
@@ -10353,10 +10550,13 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
 }
 
 @keyframes rpg-clear-lens-core-pulse {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.8;
         transform: translate(-50%, -50%) scale(1);
     }
+
     50% {
         opacity: 1;
         transform: translate(-50%, -50%) scale(1.15);
@@ -10364,14 +10564,18 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
 }
 
 @keyframes rpg-clear-secondary-flare {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.3;
         transform: scale(1);
     }
+
     30% {
         opacity: 0.6;
         transform: scale(1.2);
     }
+
     70% {
         opacity: 0.4;
         transform: scale(0.9);
@@ -10393,9 +10597,9 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
     width: 100%;
     height: 100%;
     background: linear-gradient(to bottom,
-        rgba(10, 15, 40, 0.3) 0%,
-        rgba(15, 25, 55, 0.2) 40%,
-        rgba(20, 30, 60, 0.15) 100%);
+            rgba(10, 15, 40, 0.3) 0%,
+            rgba(15, 25, 55, 0.2) 40%,
+            rgba(20, 30, 60, 0.15) 100%);
     pointer-events: none;
 }
 
@@ -10405,11 +10609,11 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
     width: 60px;
     height: 60px;
     background: radial-gradient(circle at 35% 35%,
-        rgba(255, 255, 245, 1) 0%,
-        rgba(240, 240, 230, 0.95) 40%,
-        rgba(220, 220, 210, 0.9) 60%,
-        rgba(200, 200, 195, 0.8) 80%,
-        rgba(180, 180, 175, 0) 100%);
+            rgba(255, 255, 245, 1) 0%,
+            rgba(240, 240, 230, 0.95) 40%,
+            rgba(220, 220, 210, 0.9) 60%,
+            rgba(200, 200, 195, 0.8) 80%,
+            rgba(180, 180, 175, 0) 100%);
     border-radius: 50%;
     box-shadow:
         0 0 20px 5px rgba(255, 255, 240, 0.4),
@@ -10420,9 +10624,12 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
 }
 
 @keyframes rpg-night-moon-float {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(10px);
     }
@@ -10434,9 +10641,9 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
     width: 120px;
     height: 120px;
     background: radial-gradient(circle at center,
-        rgba(200, 220, 255, 0.15) 0%,
-        rgba(180, 200, 240, 0.08) 40%,
-        transparent 70%);
+            rgba(200, 220, 255, 0.15) 0%,
+            rgba(180, 200, 240, 0.08) 40%,
+            transparent 70%);
     border-radius: 50%;
     filter: blur(10px);
     animation: rpg-night-moon-glow-pulse 8s ease-in-out infinite;
@@ -10444,10 +10651,13 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
 }
 
 @keyframes rpg-night-moon-glow-pulse {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.6;
         transform: scale(1);
     }
+
     50% {
         opacity: 1;
         transform: scale(1.1);
@@ -10458,19 +10668,22 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
 .rpg-night-star {
     position: fixed;
     background: radial-gradient(circle at center,
-        rgba(255, 255, 255, 1) 0%,
-        rgba(200, 220, 255, 0.8) 40%,
-        transparent 70%);
+            rgba(255, 255, 255, 1) 0%,
+            rgba(200, 220, 255, 0.8) 40%,
+            transparent 70%);
     border-radius: 50%;
     animation: rpg-night-star-twinkle ease-in-out infinite;
     pointer-events: none;
 }
 
 @keyframes rpg-night-star-twinkle {
-    0%, 100% {
+
+    0%,
+    100% {
         opacity: 0.3;
         transform: scale(1);
     }
+
     50% {
         opacity: 1;
         transform: scale(1.3);
@@ -10494,11 +10707,11 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
     top: 50%;
     left: 50%;
     background: linear-gradient(90deg,
-        transparent 0%,
-        rgba(255, 255, 255, 0.8) 45%,
-        rgba(255, 255, 255, 1) 50%,
-        rgba(255, 255, 255, 0.8) 55%,
-        transparent 100%);
+            transparent 0%,
+            rgba(255, 255, 255, 0.8) 45%,
+            rgba(255, 255, 255, 1) 50%,
+            rgba(255, 255, 255, 0.8) 55%,
+            transparent 100%);
 }
 
 .rpg-night-star-bright::before {
@@ -10519,10 +10732,10 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
     width: 4px;
     height: 4px;
     background: radial-gradient(circle at center,
-        rgba(200, 255, 150, 1) 0%,
-        rgba(180, 255, 120, 0.8) 30%,
-        rgba(150, 230, 100, 0.4) 60%,
-        transparent 100%);
+            rgba(200, 255, 150, 1) 0%,
+            rgba(180, 255, 120, 0.8) 30%,
+            rgba(150, 230, 100, 0.4) 60%,
+            transparent 100%);
     border-radius: 50%;
     box-shadow:
         0 0 6px 3px rgba(180, 255, 120, 0.6),
@@ -10536,26 +10749,32 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
         opacity: 0;
         transform: translate(0, 0) scale(0.5);
     }
+
     10% {
         opacity: 1;
         transform: translate(5px, -10px) scale(1);
     }
+
     30% {
         opacity: 0.3;
         transform: translate(-15px, -25px) scale(0.8);
     }
+
     50% {
         opacity: 1;
         transform: translate(10px, -40px) scale(1.1);
     }
+
     70% {
         opacity: 0.4;
         transform: translate(-10px, -55px) scale(0.9);
     }
+
     90% {
         opacity: 0.8;
         transform: translate(5px, -70px) scale(1);
     }
+
     100% {
         opacity: 0;
         transform: translate(0, -80px) scale(0.5);
@@ -10570,10 +10789,10 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
     width: 100px;
     height: 2px;
     background: linear-gradient(90deg,
-        transparent 0%,
-        rgba(255, 255, 255, 0.2) 20%,
-        rgba(255, 255, 255, 0.8) 60%,
-        rgba(255, 255, 255, 1) 100%);
+            transparent 0%,
+            rgba(255, 255, 255, 0.2) 20%,
+            rgba(255, 255, 255, 0.8) 60%,
+            rgba(255, 255, 255, 1) 100%);
     border-radius: 50%;
     transform: rotate(35deg);
     animation: rpg-night-shooting-star-fly 12s ease-in-out infinite;
@@ -10595,19 +10814,25 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
 }
 
 @keyframes rpg-night-shooting-star-fly {
-    0%, 85%, 100% {
+
+    0%,
+    85%,
+    100% {
         opacity: 0;
         left: -10%;
         top: 15%;
     }
+
     88% {
         opacity: 1;
     }
+
     95% {
         opacity: 1;
         left: 110%;
         top: 45%;
     }
+
     96% {
         opacity: 0;
     }
@@ -10759,27 +10984,36 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
 }
 
 @keyframes rpg-lightningFlash {
-    0%, 100% {
+
+    0%,
+    100% {
         background: rgba(255, 255, 255, 0);
     }
+
     10% {
         background: rgba(200, 220, 255, 0.4);
     }
+
     10.5% {
         background: rgba(255, 255, 255, 0);
     }
+
     11% {
         background: rgba(220, 235, 255, 0.6);
     }
+
     11.3% {
         background: rgba(255, 255, 255, 0);
     }
+
     45% {
         background: rgba(255, 255, 255, 0);
     }
+
     45.2% {
         background: rgba(210, 225, 255, 0.5);
     }
+
     45.5% {
         background: rgba(255, 255, 255, 0);
     }
@@ -10802,12 +11036,15 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
         transform: translateX(0) skewX(-20deg);
         opacity: 0;
     }
+
     10% {
         opacity: 0.6;
     }
+
     90% {
         opacity: 0.6;
     }
+
     100% {
         transform: translateX(calc(100vw + 100px)) skewX(-20deg);
         opacity: 0;
@@ -10892,8 +11129,10 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
     overflow-x: auto;
     overflow-y: hidden;
     flex-wrap: nowrap;
-    padding: 0 4px; /* Prevent first/last items from being cut off */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    padding: 0 4px;
+    /* Prevent first/last items from being cut off */
+    -webkit-overflow-scrolling: touch;
+    /* Smooth scrolling on iOS */
 }
 
 /* Center items when they fit, allow scrolling when they don't */
@@ -11116,11 +11355,6 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
     white-space: nowrap;
 }
 
-.rpg-fab-widget[data-full-text]:hover .rpg-fab-widget-text,
-.rpg-fab-widget[data-full-text].expanded .rpg-fab-widget-text {
-    /* Show full text on hover/tap */
-}
-
 /* Hide truncated text and show full text on expand */
 .rpg-fab-widget[data-full-text]:hover .rpg-truncated,
 .rpg-fab-widget[data-full-text].expanded .rpg-truncated {
@@ -11150,7 +11384,10 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
     left: 50%;
     transform: translateX(-50%);
 }
-.rpg-fab-widget-pos-0:hover { transform: translateX(-50%) scale(1.05); }
+
+.rpg-fab-widget-pos-0:hover {
+    transform: translateX(-50%) scale(1.05);
+}
 
 /* Position 1: Northeast */
 .rpg-fab-widget-pos-1 {
@@ -11164,7 +11401,10 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
     left: calc(100% + 15px);
     transform: translateY(-50%);
 }
-.rpg-fab-widget-pos-2:hover { transform: translateY(-50%) scale(1.05); }
+
+.rpg-fab-widget-pos-2:hover {
+    transform: translateY(-50%) scale(1.05);
+}
 
 /* Position 3: Southeast */
 .rpg-fab-widget-pos-3 {
@@ -11178,7 +11418,10 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
     left: 50%;
     transform: translateX(-50%);
 }
-.rpg-fab-widget-pos-4:hover { transform: translateX(-50%) scale(1.05); }
+
+.rpg-fab-widget-pos-4:hover {
+    transform: translateX(-50%) scale(1.05);
+}
 
 /* Position 5: Southwest */
 .rpg-fab-widget-pos-5 {
@@ -11398,8 +11641,13 @@ body[data-theme="cyberpunk"] .rpg-music-widget-play {
 }
 
 @keyframes fabSpin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 /* ============================================
@@ -11542,7 +11790,8 @@ body:has(.rpg-panel[data-theme="light"]) .rpg-fab-widget:hover {
 
 /* Base Strip Widget Styles */
 .rpg-strip-widget {
-    display: none; /* Hidden by default, shown via JS when enabled */
+    display: none;
+    /* Hidden by default, shown via JS when enabled */
     flex-direction: column;
     align-items: center;
     justify-content: center;
