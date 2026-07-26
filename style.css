@@ -3418,13 +3418,15 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
 /* Apply theme colors to tabs navigation */
 .rpg-panel[data-theme="sci-fi"] .rpg-tabs-nav,
 .rpg-panel[data-theme="fantasy"] .rpg-tabs-nav,
-.rpg-panel[data-theme="cyberpunk"] .rpg-tabs-nav {
+.rpg-panel[data-theme="cyberpunk"] .rpg-tabs-nav,
+.rpg-panel[data-theme="custom"] .rpg-tabs-nav {
     border-bottom-color: var(--rpg-border);
 }
 
 .rpg-panel[data-theme="sci-fi"] .rpg-tab-btn,
 .rpg-panel[data-theme="fantasy"] .rpg-tab-btn,
-.rpg-panel[data-theme="cyberpunk"] .rpg-tab-btn {
+.rpg-panel[data-theme="cyberpunk"] .rpg-tab-btn,
+.rpg-panel[data-theme="custom"] .rpg-tab-btn {
     background: var(--rpg-accent);
     border-color: var(--rpg-border);
     color: var(--rpg-text);
@@ -3432,73 +3434,83 @@ body:has(.rpg-panel.rpg-position-left) #sheld {
 
 .rpg-panel[data-theme="sci-fi"] .rpg-tab-btn:hover,
 .rpg-panel[data-theme="fantasy"] .rpg-tab-btn:hover,
-.rpg-panel[data-theme="cyberpunk"] .rpg-tab-btn:hover {
+.rpg-panel[data-theme="cyberpunk"] .rpg-tab-btn:hover,
+.rpg-panel[data-theme="custom"] .rpg-tab-btn:hover {
     background: var(--rpg-highlight);
     border-color: var(--rpg-highlight);
 }
 
 .rpg-panel[data-theme="sci-fi"] .rpg-tab-btn.active,
 .rpg-panel[data-theme="fantasy"] .rpg-tab-btn.active,
-.rpg-panel[data-theme="cyberpunk"] .rpg-tab-btn.active {
-    background: var(--rpg-highlight);
-    border-color: var(--rpg-highlight);
-    color: var(--rpg-bg);
+.rpg-panel[data-theme="cyberpunk"] .rpg-tab-btn.active,
+.rpg-panel[data-theme="custom"] .rpg-tab-btn.active {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: var(--rpg-border);
+    color: var(--rpg-text);
 }
 
 /* Apply theme colors to inventory subtabs */
 .rpg-panel[data-theme="sci-fi"] .rpg-inventory-subtabs,
 .rpg-panel[data-theme="fantasy"] .rpg-inventory-subtabs,
-.rpg-panel[data-theme="cyberpunk"] .rpg-inventory-subtabs {
+.rpg-panel[data-theme="cyberpunk"] .rpg-inventory-subtabs,
+.rpg-panel[data-theme="custom"] .rpg-inventory-subtabs {
     border-bottom-color: var(--rpg-border);
 }
 
 .rpg-panel[data-theme="sci-fi"] .rpg-inventory-subtab,
 .rpg-panel[data-theme="fantasy"] .rpg-inventory-subtab,
-.rpg-panel[data-theme="cyberpunk"] .rpg-inventory-subtab {
+.rpg-panel[data-theme="cyberpunk"] .rpg-inventory-subtab,
+.rpg-panel[data-theme="custom"] .rpg-inventory-subtab {
     border-color: var(--rpg-border);
     color: var(--rpg-text);
 }
 
 .rpg-panel[data-theme="sci-fi"] .rpg-inventory-subtab:hover,
 .rpg-panel[data-theme="fantasy"] .rpg-inventory-subtab:hover,
-.rpg-panel[data-theme="cyberpunk"] .rpg-inventory-subtab:hover {
-    border-color: var(--rpg-highlight);
-    color: var(--rpg-highlight);
+.rpg-panel[data-theme="cyberpunk"] .rpg-inventory-subtab:hover,
+.rpg-panel[data-theme="custom"] .rpg-inventory-subtab:hover {
+    border-color: var(--rpg-border);
+    color: var(--rpg-text);
 }
 
 .rpg-panel[data-theme="sci-fi"] .rpg-inventory-subtab.active,
 .rpg-panel[data-theme="fantasy"] .rpg-inventory-subtab.active,
-.rpg-panel[data-theme="cyberpunk"] .rpg-inventory-subtab.active {
-    border-color: var(--rpg-highlight);
-    color: var(--rpg-highlight);
+.rpg-panel[data-theme="cyberpunk"] .rpg-inventory-subtab.active,
+.rpg-panel[data-theme="custom"] .rpg-inventory-subtab.active {
+    border-color: var(--rpg-border);
+    color: var(--rpg-text);
 }
 
 /* Apply theme colors to quests subtabs */
 .rpg-panel[data-theme="sci-fi"] .rpg-quests-subtabs,
 .rpg-panel[data-theme="fantasy"] .rpg-quests-subtabs,
-.rpg-panel[data-theme="cyberpunk"] .rpg-quests-subtabs {
+.rpg-panel[data-theme="cyberpunk"] .rpg-quests-subtabs,
+.rpg-panel[data-theme="custom"] .rpg-quests-subtabs {
     border-bottom-color: var(--rpg-border);
 }
 
 .rpg-panel[data-theme="sci-fi"] .rpg-quests-subtab,
 .rpg-panel[data-theme="fantasy"] .rpg-quests-subtab,
-.rpg-panel[data-theme="cyberpunk"] .rpg-quests-subtab {
+.rpg-panel[data-theme="cyberpunk"] .rpg-quests-subtab,
+.rpg-panel[data-theme="custom"] .rpg-quests-subtab {
     border-color: var(--rpg-border);
     color: var(--rpg-text);
 }
 
 .rpg-panel[data-theme="sci-fi"] .rpg-quests-subtab:hover,
 .rpg-panel[data-theme="fantasy"] .rpg-quests-subtab:hover,
-.rpg-panel[data-theme="cyberpunk"] .rpg-quests-subtab:hover {
-    border-color: var(--rpg-highlight);
-    color: var(--rpg-highlight);
+.rpg-panel[data-theme="cyberpunk"] .rpg-quests-subtab:hover,
+.rpg-panel[data-theme="custom"] .rpg-quests-subtab:hover {
+    border-color: var(--rpg-border);
+    color: var(--rpg-text);
 }
 
 .rpg-panel[data-theme="sci-fi"] .rpg-quests-subtab.active,
 .rpg-panel[data-theme="fantasy"] .rpg-quests-subtab.active,
-.rpg-panel[data-theme="cyberpunk"] .rpg-quests-subtab.active {
-    border-color: var(--rpg-highlight);
-    color: var(--rpg-highlight);
+.rpg-panel[data-theme="cyberpunk"] .rpg-quests-subtab.active,
+.rpg-panel[data-theme="custom"] .rpg-quests-subtab.active {
+    border-color: var(--rpg-border);
+    color: var(--rpg-text);
 }
 
 /* Apply theme colors to storage locations */
